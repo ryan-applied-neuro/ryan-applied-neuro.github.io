@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Neuro Insights, LLC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling behavior */
+            overflow-x: hidden; /* Hide horizontal overflow */
+            transition: transform 0.3s ease; /* Smooth transition for body movement */
+        }
+        section {
+            min-height: 100vh; /* Full viewport height for each section */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 18px; /* Reduced font size for better readability */
+            padding: 30px; /* Reduced padding for text content */
+            position: relative;
+        }
+        p {
+            max-width: 600px; /* Set maximum width for paragraphs */
+            margin: 0 auto; /* Center paragraphs horizontally */
+        }
+        section h2 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        #intro {
+            background-image: url('./Applied Neuro Files/background1.jpg');
+            background-size: cover;
+            background-attachment: fixed; /* Fixed background */
+            color: #fff;
+        }
+        #expertise {
+            background-color: #333; /* Dark gray background */
+            color: #fff; /* White text color */
+        }
+        #methods {
+            background-image: url('./Applied Neuro Files/background2.jpg');
+            background-size: cover;
+            color: #fff;
+        }
+        #offerings {
+            background-image: url('./Applied Neuro Files/background3.jpg');
+            background-size: cover;
+            color: #fff;
+        }
+        /* Navigation menu styles */
+        #navMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333; /* Dark gray background */
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            transform: translateX(-250px); /* Initially off-screen */
+            transition: transform 0.3s ease;
+            z-index: 1; /* Ensure menu is above content */
+        }
+        #navButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            z-index: 2; /* Ensure button is above menu */
+        }
+        #navMenu ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 50px; /* Adjust margin to center menu items */
+        }
+        #navMenu li {
+            margin-bottom: 10px;
+        }
+        #navMenu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        #navMenu a:hover {
+            color: #ffcc00; /* Yellow hover color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu button -->
+    <div id="navButton">&#9776; ANI</div>
+
+    <!-- Navigation menu -->
+    <div id="navMenu">
+        <ul>
+            <li><a href="#intro">Applied Neuro Insights, LLC.</a></li>
+            <li><a href="#expertise">Our Expertise</a></li>
+            <li><a href="#methods">Our Methods</a></li>
+            <li><a href="#offerings">Our Offerings</a></li>
+        </ul>
+    </div>
+
+    <section id="intro">
+        <h2>Applied Neuro Insights, LLC.</h2>
+        <p>Applied Neuro Insights is a neuroscience company specializing in the development of new technology designed to measure and enhance cognitive function for civilian and military applications in pursuit of our mission to advance the understanding and optimization of human cognition.</p>
+    </section>
+
+    <section id="expertise">
+        <h2>Our Expertise</h2>
+        <p>At Applied Neuro Insights, we bring together a team of highly skilled neuroscientists, software engineers, and researchers who are passionate about pushing the boundaries of cognitive science. With extensive experience conducting research in the field of cognitive health, leading research labs in both academic and professional settings, and publishing work in peer-reviewed journals, we have the right skills to support clients to achieve the outcomes they desire.</p>
+    </section>
+
+    <section id="methods">
+        <h2>Our Methods</h2>
+        <p>We apply machine learning (ML) and artificial intelligence (AI) to measure cognitive states and predict behavioral outcomes. Our products rely upon converging evidence gathered from tools such as EEG, fMRI, and HRV. <br><br> Our devices allow us to improve cognitive functioning and detect these effects by collecting data from high-quality sensors in nearly any environment. We accomplish this with the use of transcranial direct current stimulation (tDCS) to activate brain regions that are critical for improving cognitive function and behavioral performance, and the application of EEG sensors which can measure these changes on the neural level.</p>
+    </section>
+
+    <section id="offerings">
+        <h2>Our Offerings</h2>
+        <p>We provide unparalleled neuroscience-based artificial intelligence tools to counter violent extremism, enhance intelligence gathering, and assess & improve cognitive performance. This includes our proprietary system that helps with assessment and selection, by identifying recruits with cognitive traits that—alongside physical performance—are critical to both battlefield success and long-term brain health. <br><br> Our systems utilize AI/ML system to aid in both the set up and automated data processing without a skilled technician present to set it up. This means that our devices can be set up by anyone – not only professional EEG technicians – enabling bespoke technological solutions with high-quality data collection and automated data processing.</p>
+    </section>
+
+    <!-- JavaScript for sliding navigation menu -->
+    <script>
+        const navButton = document.getElementById('navButton');
+        const navMenu = document.getElementById('navMenu');
+        let menuOpen = false;
+
+        navButton.addEventListener('click', function() {
+            if (!menuOpen) {
+                navMenu.style.transform = 'translateX(0)';
+                document.body.style.transform = 'translateX(250px)';
+                menuOpen = true;
+            } else {
+                navMenu.style.transform = 'translateX(-250px)';
+                document.body.style.transform = 'translateX(0)';
+                menuOpen = false;
+            }
+        });
+    </script>
+</body>
+</html>
